@@ -13,7 +13,7 @@ phases:
       - echo "zip -r9 ../deployment_package.zip ."
       - echo "cd .."
       -  # zip -g deployment_package.zip lambda_function.py
-      - zip -r -9 deployment_package.zip lambda_function.py
+      - zip -r -9 deployment_package.zip lambda_function.py -x .env node_modules
   post_build:
     commands:
       - echo "Updating lambda Function..."
